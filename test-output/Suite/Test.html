@@ -1,0 +1,724 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>18/8/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Oct 25 14:00:47 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>364 seconds (364849 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td>sanity </td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.substore_testcase.verifyConsumptionCreationModule()'><b>verifyConsumptionCreationModule</b><br>Test class: testcases.substore_testcase<br>Test method: Pre condition: User should be logged in and it is on  Substore module
+1. Naviagte to the "Consumption" section of the "Inventory" sub-module
+2. Click on "New Consumption" 
+3. Enter all the required field 
+(Consumption Date ,Item Name,Consumed Qty)
+4. Click on "Save" button
+5. Upon clicking the "Save" button, a success message saying "Consumption completed" should be displayed, and the data should be accurately reflected in the record.</td>
+<td><div><pre>java.lang.Exception: Error occurred while creating consumption record: unexpected alert open: {Alert text : Consume Quantity is greater than Available Quantity.}
+  (Session info: chrome=130.0.6723.70): Consume Quantity is greater than Available Quantity.
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [773c05d67f6f65af094ecc63480b27b9, findElement {using=xpath, value=//p[contains(text(),&apos; Success &apos;)]/../p[contains(text(),&apos;null&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.70, chrome: {chromedriverVersion: 130.0.6723.69 (3ec172b971b9..., userDataDir: /var/folders/5y/7c_nbpk94jg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51927}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51927/devtoo..., se:cdpVersion: 130.0.6723.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 773c05d67f6f65af094ecc63480b27b9
+	at pages.substore_page.verifyConsumptionCreationModule(substore_page.java:1342)
+	at testcases.substore_testcase.verifyConsumptionCreationModule(substore_testcase.java:327)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Consume Quantity is greater than Available Quantity.}
+  (Session info: chrome=130.0.6723.70): Consume Quantity is greater than Available Quantity.
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [773c05d67f6f65af094ecc63480b27b9, findElement {using=xpath, value=//p[contains(text(),&apos; Success &apos;)]/../p[contains(text(),&apos;null&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.70, chrome: {chromedriverVersion: 130.0.6723.69 (3ec172b971b9..., userDataDir: /var/folders/5y/7c_nbpk94jg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51927}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51927/devtoo..., se:cdpVersion: 130.0.6723.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 773c05d67f6f65af094ecc63480b27b9
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:130)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at coreUtilities.utils.CommonEvents.findElement(CommonEvents.java:142)
+	at pages.substore_page.verifyConsumptionCreationModule(substore_page.java:1334)
+	... 14 more
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace650465300", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace650465300'><pre>java.lang.Exception: Error occurred while creating consumption record: unexpected alert open: {Alert text : Consume Quantity is greater than Available Quantity.}
+  (Session info: chrome=130.0.6723.70): Consume Quantity is greater than Available Quantity.
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [773c05d67f6f65af094ecc63480b27b9, findElement {using=xpath, value=//p[contains(text(),&apos; Success &apos;)]/../p[contains(text(),&apos;null&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.70, chrome: {chromedriverVersion: 130.0.6723.69 (3ec172b971b9..., userDataDir: /var/folders/5y/7c_nbpk94jg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51927}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51927/devtoo..., se:cdpVersion: 130.0.6723.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 773c05d67f6f65af094ecc63480b27b9
+	at pages.substore_page.verifyConsumptionCreationModule(substore_page.java:1342)
+	at testcases.substore_testcase.verifyConsumptionCreationModule(substore_testcase.java:327)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Consume Quantity is greater than Available Quantity.}
+  (Session info: chrome=130.0.6723.70): Consume Quantity is greater than Available Quantity.
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [773c05d67f6f65af094ecc63480b27b9, findElement {using=xpath, value=//p[contains(text(),&apos; Success &apos;)]/../p[contains(text(),&apos;null&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.70, chrome: {chromedriverVersion: 130.0.6723.69 (3ec172b971b9..., userDataDir: /var/folders/5y/7c_nbpk94jg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51927}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51927/devtoo..., se:cdpVersion: 130.0.6723.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 773c05d67f6f65af094ecc63480b27b9
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:130)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at coreUtilities.utils.CommonEvents.findElement(CommonEvents.java:142)
+	at pages.substore_page.verifyConsumptionCreationModule(substore_page.java:1334)
+	... 14 more
+</pre></div></td>
+<td>15</td>
+<td>testcases.substore_testcase@56f2bbea</td></tr>
+<tr>
+<td title='testcases.substore_testcase.verifySubstoreModule()'><b>verifySubstoreModule</b><br>Test class: testcases.substore_testcase<br>Test method: Precondition: User should be logged in and on the Verification section\n"
+	+ "1. Click on the Inventory Module
+	+ "2. Hover over on module signout button and get text3. Verify text To change, you can always click here.</td>
+<td><div><pre>java.lang.Exception: Failed to verify the hover text on the &apos;Sign Out&apos; module: Cannot invoke &quot;java.lang.CharSequence.toString()&quot; because &quot;s&quot; is null
+	at pages.substore_page.verifyModuleSignoutHoverText(substore_page.java:474)
+	at testcases.substore_testcase.verifySubstoreModule(substore_testcase.java:104)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: java.lang.NullPointerException: Cannot invoke &quot;java.lang.CharSequence.toString()&quot; because &quot;s&quot; is null
+	at java.base/java.lang.String.contains(String.java:3023)
+	at pages.substore_page.verifyModuleSignoutHoverText(substore_page.java:466)
+	... 14 more
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1932118013", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1932118013'><pre>java.lang.Exception: Failed to verify the hover text on the &apos;Sign Out&apos; module: Cannot invoke &quot;java.lang.CharSequence.toString()&quot; because &quot;s&quot; is null
+	at pages.substore_page.verifyModuleSignoutHoverText(substore_page.java:474)
+	at testcases.substore_testcase.verifySubstoreModule(substore_testcase.java:104)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: java.lang.NullPointerException: Cannot invoke &quot;java.lang.CharSequence.toString()&quot; because &quot;s&quot; is null
+	at java.base/java.lang.String.contains(String.java:3023)
+	at pages.substore_page.verifyModuleSignoutHoverText(substore_page.java:466)
+	... 14 more
+</pre></div></td>
+<td>2</td>
+<td>testcases.substore_testcase@56f2bbea</td></tr>
+<tr>
+<td title='testcases.substore_testcase.verifyInventoryandStockModule()'><b>verifyInventoryandStockModule</b><br>Test class: testcases.substore_testcase<br>Test method: Pre condition: User should be logged in
+1. Navigate to the "Inventory" module
+2. Navigate to "Internal" sub-module 
+3. Navigate to "Requisition" section
+4. Click on "Direct Dispatch" button
+5. Enter all the required field 
+( Store -> (it should match with current store of substore module), ItemCategory, ItemName , Dispatched Qty, Remark)
+6. Click on the "Direct Dispatch" button
+7. Click on "Close" icon 
+8. Navigate to "Substore" module and click on "Accounts" sub-modal
+9. Navigate to "Inventory Requisition" section of "Inventory" sub-module 
+10. Click on "Receive item" of the specfic record
+11. Click on the "Recevie" butotn
+12. Click on  "Back to Requisition List" button
+13. Navigate to the "Stock"section
+14. Verify that the available quantity of items has increased in the stock.</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Direct&apos;) and contains(text(),&apos;Dispatch&apos;)]&quot;}
+  (Session info: chrome=130.0.6723.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [773c05d67f6f65af094ecc63480b27b9, findElement {using=xpath, value=//button[contains(text(),&apos;Direct&apos;) and contains(text(),&apos;Dispatch&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.70, chrome: {chromedriverVersion: 130.0.6723.69 (3ec172b971b9..., userDataDir: /var/folders/5y/7c_nbpk94jg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51927}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51927/devtoo..., se:cdpVersion: 130.0.6723.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 773c05d67f6f65af094ecc63480b27b9
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at coreUtilities.utils.CommonEvents.findElement(CommonEvents.java:142)
+	at pages.substore_page.verifyInventoryModule(substore_page.java:1127)
+	at testcases.substore_testcase.verifyInventoryandStockModule(substore_testcase.java:303)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2132310380", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2132310380'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Direct&apos;) and contains(text(),&apos;Dispatch&apos;)]&quot;}
+  (Session info: chrome=130.0.6723.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [773c05d67f6f65af094ecc63480b27b9, findElement {using=xpath, value=//button[contains(text(),&apos;Direct&apos;) and contains(text(),&apos;Dispatch&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.70, chrome: {chromedriverVersion: 130.0.6723.69 (3ec172b971b9..., userDataDir: /var/folders/5y/7c_nbpk94jg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51927}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51927/devtoo..., se:cdpVersion: 130.0.6723.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 773c05d67f6f65af094ecc63480b27b9
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at coreUtilities.utils.CommonEvents.findElement(CommonEvents.java:142)
+	at pages.substore_page.verifyInventoryModule(substore_page.java:1127)
+	at testcases.substore_testcase.verifyInventoryandStockModule(substore_testcase.java:303)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+</pre></div></td>
+<td>30</td>
+<td>testcases.substore_testcase@56f2bbea</td></tr>
+<tr>
+<td title='testcases.substore_testcase.verifyCreateRequisitionButton()'><b>verifyCreateRequisitionButton</b><br>Test class: testcases.substore_testcase<br>Test method: Pre condition: User should be logged in and it is on Inventory sub-module
+1. Click on "Inventory Requisition" section
+2. Click on "Create Requisition" button
+3. Click on "Target Inventory " field and Select "GENERAL-INVENTORY" option
+4. Click on "Item Category" drop down and select " Consumables"  option
+5. Enter "tissue" in ItemName field
+6. Enter the "Required Quantity" field 
+7. Click on "Request" button
+8. Click on "Close" icon
+9. Verify popup message Requisition is Generated and Saved</td>
+<td><div><pre>java.lang.AssertionError: expected [null] but found [Requisition is Generated and Saved]
+	at testcases.substore_testcase.verifyCreateRequisitionButton(substore_testcase.java:174)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1557993045", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1557993045'><pre>java.lang.AssertionError: expected [null] but found [Requisition is Generated and Saved]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at testcases.substore_testcase.verifyCreateRequisitionButton(substore_testcase.java:174)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+</pre></div></td>
+<td>21</td>
+<td>testcases.substore_testcase@56f2bbea</td></tr>
+<tr>
+<td title='testcases.substore_testcase.verifyInventoryModule()'><b>verifyInventoryModule</b><br>Test class: testcases.substore_testcase<br>Test method: Pre condition: User should be logged in 
+1. Navigate to the "Inventory" module
+2. Navigate to "Internal" sub-module 
+3. Navigate to "Requisition" section
+4. Click on "Direct Dispatch" button
+5. Enter all the required field 
+( Store -> (it should match with current store of substore module), ItemCategory, ItemName , Dispatched Qty, Remark)
+6. Click on the "Direct Dispatch" button
+7. Click on "Close" icon 
+8. Navigate to "Substore" module and click on "Accounts" sub-modal
+9. Navigate to "Inventory Requisition" section of "Inventory" sub-module 
+10. Click on "Receive item" of the specfic record
+11. Click on the "Recevie" butotn
+12. Click on  "Back to Requisition List" button13. After clicking the "Receive" button, the remarks field should disappear, and a success message should appear: "Success: Items Received Successfully. Stock Updated."
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Direct&apos;) and contains(text(),&apos;Dispatch&apos;)]&quot;}
+  (Session info: chrome=130.0.6723.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [773c05d67f6f65af094ecc63480b27b9, findElement {using=xpath, value=//button[contains(text(),&apos;Direct&apos;) and contains(text(),&apos;Dispatch&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.70, chrome: {chromedriverVersion: 130.0.6723.69 (3ec172b971b9..., userDataDir: /var/folders/5y/7c_nbpk94jg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51927}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51927/devtoo..., se:cdpVersion: 130.0.6723.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 773c05d67f6f65af094ecc63480b27b9
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at coreUtilities.utils.CommonEvents.findElement(CommonEvents.java:142)
+	at pages.substore_page.verifyInventoryModule(substore_page.java:1127)
+	at testcases.substore_testcase.verifyInventoryModule(substore_testcase.java:279)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace10360391", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace10360391'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Direct&apos;) and contains(text(),&apos;Dispatch&apos;)]&quot;}
+  (Session info: chrome=130.0.6723.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [773c05d67f6f65af094ecc63480b27b9, findElement {using=xpath, value=//button[contains(text(),&apos;Direct&apos;) and contains(text(),&apos;Dispatch&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.70, chrome: {chromedriverVersion: 130.0.6723.69 (3ec172b971b9..., userDataDir: /var/folders/5y/7c_nbpk94jg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51927}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51927/devtoo..., se:cdpVersion: 130.0.6723.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 773c05d67f6f65af094ecc63480b27b9
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at coreUtilities.utils.CommonEvents.findElement(CommonEvents.java:142)
+	at pages.substore_page.verifyInventoryModule(substore_page.java:1127)
+	at testcases.substore_testcase.verifyInventoryModule(substore_testcase.java:279)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+</pre></div></td>
+<td>30</td>
+<td>testcases.substore_testcase@56f2bbea</td></tr>
+<tr>
+<td title='testcases.substore_testcase.verifyReturnModuleErrorMessage()'><b>verifyReturnModuleErrorMessage</b><br>Test class: testcases.substore_testcase<br>Test method: Pre condition: User should be logged in and it is on Inventory sub-module
+1. Naviagte to the "Return" section
+2. Click on "Return Items" buton
+3. Click on "Return" button
+4. After clicking the "Return" button, a error message stating "Please select inventory for return" should be displayed. Ensure that the entered data is visible in the "Return" section of the "Inventory" sub-module.</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//p[contains(text(),&apos; success &apos;)]/../p[contains(text(),&apos;null&apos;)]&quot;}
+  (Session info: chrome=130.0.6723.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [773c05d67f6f65af094ecc63480b27b9, findElement {using=xpath, value=//p[contains(text(),&apos; success &apos;)]/../p[contains(text(),&apos;null&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.70, chrome: {chromedriverVersion: 130.0.6723.69 (3ec172b971b9..., userDataDir: /var/folders/5y/7c_nbpk94jg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51927}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51927/devtoo..., se:cdpVersion: 130.0.6723.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 773c05d67f6f65af094ecc63480b27b9
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at coreUtilities.utils.CommonEvents.findElement(CommonEvents.java:142)
+	at pages.substore_page.verifyReturnModuleErrorMessage(substore_page.java:1435)
+	at testcases.substore_testcase.verifyReturnModuleErrorMessage(substore_testcase.java:352)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1009294933", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1009294933'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//p[contains(text(),&apos; success &apos;)]/../p[contains(text(),&apos;null&apos;)]&quot;}
+  (Session info: chrome=130.0.6723.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [773c05d67f6f65af094ecc63480b27b9, findElement {using=xpath, value=//p[contains(text(),&apos; success &apos;)]/../p[contains(text(),&apos;null&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.70, chrome: {chromedriverVersion: 130.0.6723.69 (3ec172b971b9..., userDataDir: /var/folders/5y/7c_nbpk94jg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51927}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51927/devtoo..., se:cdpVersion: 130.0.6723.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 773c05d67f6f65af094ecc63480b27b9
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at coreUtilities.utils.CommonEvents.findElement(CommonEvents.java:142)
+	at pages.substore_page.verifyReturnModuleErrorMessage(substore_page.java:1435)
+	at testcases.substore_testcase.verifyReturnModuleErrorMessage(substore_testcase.java:352)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+</pre></div></td>
+<td>39</td>
+<td>testcases.substore_testcase@56f2bbea</td></tr>
+<tr>
+<td title='testcases.substore_testcase.verifySubstoreCounterSubModule()'><b>verifySubstoreCounterSubModule</b><br>Test class: testcases.substore_testcase<br>Test method: Precondition: User should be logged in and on the healthapp section
+1. Login in the healthapp application
+2. Scroll down menu till Substore
+3. Click on the Substore4. SubStore module should be present</td>
+<td><div><pre>java.lang.AssertionError: expected [null] but found [https://healthapp.yaksha.com/Home/Index#/WardSupply]
+	at testcases.substore_testcase.verifySubstoreCounterSubModule(substore_testcase.java:76)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1134071670", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1134071670'><pre>java.lang.AssertionError: expected [null] but found [https://healthapp.yaksha.com/Home/Index#/WardSupply]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at testcases.substore_testcase.verifySubstoreCounterSubModule(substore_testcase.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+</pre></div></td>
+<td>27</td>
+<td>testcases.substore_testcase@56f2bbea</td></tr>
+<tr>
+<td title='testcases.substore_testcase.verifyAddPost()'><b>verifyAddPost</b><br>Test class: testcases.substore_testcase<br>Test method: Precondition: Access to JSONPlaceholder API
+1. Send POST request to create a new post
+2. Verify the response status code is 201
+3. Validate the response body contains the expected post data</td>
+<td><div><pre>java.lang.NumberFormatException: Cannot parse null string
+	at java.base/java.lang.Integer.parseInt(Integer.java:550)
+	at java.base/java.lang.Integer.parseInt(Integer.java:685)
+	at testcases.substore_testcase.verifyAddPost(substore_testcase.java:409)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace159428286", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace159428286'><pre>java.lang.NumberFormatException: Cannot parse null string
+	at java.base/java.lang.Integer.parseInt(Integer.java:550)
+	at java.base/java.lang.Integer.parseInt(Integer.java:685)
+	at testcases.substore_testcase.verifyAddPost(substore_testcase.java:409)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+</pre></div></td>
+<td>0</td>
+<td>testcases.substore_testcase@56f2bbea</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.substore_testcase.verifyPrintModalIsOpenedIfUserSelectsViewButton()'><b>verifyPrintModalIsOpenedIfUserSelectsViewButton</b><br>Test class: testcases.substore_testcase<br>Test method: Pre condition: User should be logged in and it is on Inventory sub-module > List Request section 
+1. Navigate to " Inventory Requisition" section 
+2.  Click on "View" button of the specfic record.
+3. Click on "Close" icon button
+4. After Clicking "View" button, "REQUISITION DETAILS PRINT" page should pop up and by Clicking on close icon, user should navigate back to the Inventory Requisition page </td>
+<td></td>
+<td>2</td>
+<td>testcases.substore_testcase@56f2bbea</td></tr>
+<tr>
+<td title='testcases.substore_testcase.verifyReportModule()'><b>verifyReportModule</b><br>Test class: testcases.substore_testcase<br>Test method: Pre condition: User should be logged in and it is on  Substore module
+1. Naviagte to the "Reports" section of the "Inventory" sub-module
+2. Navigate to "Consumption Report" sub-modal 
+3. Enter all the "From" and "To" field 
+4. Click on "Show Report" button
+5. The 'Date' column data must align with the selected option from the dropdown, and it should display records added in the "Consumption" section for that specific date.</td>
+<td></td>
+<td>8</td>
+<td>testcases.substore_testcase@56f2bbea</td></tr>
+<tr>
+<td title='testcases.substore_testcase.verifyGetPostById()'><b>verifyGetPostById</b><br>Test class: testcases.substore_testcase<br>Test method: Precondition: Access to JSONPlaceholder API
+1. Send GET request to retrieve post by ID
+2. Verify the response status code is 200
+3. Validate the response body contains the expected post data</td>
+<td></td>
+<td>1</td>
+<td>testcases.substore_testcase@56f2bbea</td></tr>
+<tr>
+<td title='testcases.substore_testcase.verifyRecordsAreFilteredAccordingToSearchData()'><b>verifyRecordsAreFilteredAccordingToSearchData</b><br>Test class: testcases.substore_testcase<br>Test method: Pre condition: User should be logged in and it is on Inventory sub-module
+1. Naviagte to the "Inventory Requisition" section
+2. Click on "all" radio button
+3. Enter the pending keyword in the search bar.
+4. Record should be present as per the entered keyword</td>
+<td></td>
+<td>1</td>
+<td>testcases.substore_testcase@56f2bbea</td></tr>
+<tr>
+<td title='testcases.substore_testcase.verifyFilterByStoreFunctionality()'><b>verifyFilterByStoreFunctionality</b><br>Test class: testcases.substore_testcase<br>Test method: Pre condition: User should be logged in and it is on Inventory sub-module
+1. Navigate to "Inventory Requisition" section
+2. Select option ar per the choice</td>
+<td></td>
+<td>0</td>
+<td>testcases.substore_testcase@56f2bbea</td></tr>
+<tr>
+<td title='testcases.substore_testcase.verifyInventoryRequisitionSection()'><b>verifyInventoryRequisitionSection</b><br>Test class: testcases.substore_testcase<br>Test method: Pre condition: User should be logged in and it is on SubStore module
+1. Click on the SubStore module drop-down arrow 
+2. Click on Inventory sub-module
+3. Click on Inventory Requisition section</td>
+<td></td>
+<td>10</td>
+<td>testcases.substore_testcase@56f2bbea</td></tr>
+<tr>
+<td title='testcases.substore_testcase.verifySubstoreSubModules()'><b>verifySubstoreSubModules</b><br>Test class: testcases.substore_testcase<br>Test method: 1. Login in the healthapp application
+2. Click on the substore 
+3. "Select your Substore" pop up 4. Expected value that should be present in "Select your Substore" modal
+Expected sub-modals button:  Accounts,male ward SubStore,SubStore1,SubStore1</td>
+<td></td>
+<td>6</td>
+<td>testcases.substore_testcase@56f2bbea</td></tr>
+<tr>
+<td title='testcases.substore_testcase.verifyUpdatePost()'><b>verifyUpdatePost</b><br>Test class: testcases.substore_testcase<br>Test method: Precondition: Access to JSONPlaceholder API
+1. Send PUT request to update an existing post
+2. Verify the response status code is 200
+3. Validate the response body contains the updated post data</td>
+<td></td>
+<td>0</td>
+<td>testcases.substore_testcase@56f2bbea</td></tr>
+<tr>
+<td title='testcases.substore_testcase.verifyAllSubstoreModulesAreDisplayedInSublist()'><b>verifyAllSubstoreModulesAreDisplayedInSublist</b><br>Test class: testcases.substore_testcase<br>Test method: Pre condition: User should be logged in and it is on SubStore module
+1. Click on the SubStore Module drop-down arrow   
+2. Click on Inventory module. Expected Sub modules are : Stock, Inventory Requisition, Consumption, Reports, Patient Consumption,Return</td>
+<td></td>
+<td>5</td>
+<td>testcases.substore_testcase@56f2bbea</td></tr>
+<tr>
+<td title='testcases.substore_testcase.verifyDateRangeFilterFunctionality()'><b>verifyDateRangeFilterFunctionality</b><br>Test class: testcases.substore_testcase<br>Test method: Pre condition: User should be logged in and it is on Inventory Sub-module
+1. Navigate to "Inventory Requisition" section
+2. Click on the "From" date and select the "Jan 2022" date
+3. Click on the "To" date and Select "Current date" 
+4. Click on "OK" button
+5. The 'Date' column date must fall within the selected date </td>
+<td></td>
+<td>6</td>
+<td>testcases.substore_testcase@56f2bbea</td></tr>
+<tr>
+<td title='testcases.substore_testcase.verifyPendingRecordCanBeCopied()'><b>verifyPendingRecordCanBeCopied</b><br>Test class: testcases.substore_testcase<br>Test method: Pre condition: User should be logged in and it is on Inventory sub-module
+1. Navigate to the "Inventory Requisition" section
+2. Click on "..." drop down of the specfic record
+3.  Select  "create copy" from drop down</td>
+<td></td>
+<td>10</td>
+<td>testcases.substore_testcase@56f2bbea</td></tr>
+<tr>
+<td title='testcases.substore_testcase.verifyNavigationBetweenSubmodules()'><b>verifyNavigationBetweenSubmodules</b><br>Test class: testcases.substore_testcase<br>Test method: Pre condition: User should be logged in 
+1. Click on the Substore Module drop-down arrow2. Verify navigation between sub-modules</td>
+<td></td>
+<td>19</td>
+<td>testcases.substore_testcase@56f2bbea</td></tr>
+<tr>
+<td title='testcases.substore_testcase.takingScreenshotOfCurrentPage()'><b>takingScreenshotOfCurrentPage</b><br>Test class: testcases.substore_testcase<br>Test method: Under Substore module > INventory Section"
+			+ "Take the screenshot of the current page</td>
+<td></td>
+<td>0</td>
+<td>testcases.substore_testcase@56f2bbea</td></tr>
+<tr>
+<td title='testcases.substore_testcase.VerifyDateRangeButton()'><b>VerifyDateRangeButton</b><br>Test class: testcases.substore_testcase<br>Test method: Pre condition: User should be logged in and it is on Inventory sub-module > List Request section 
+1. Click on the data range button. 
+2. select "one week" option from the drop down.</td>
+<td></td>
+<td>3</td>
+<td>testcases.substore_testcase@56f2bbea</td></tr>
+<tr>
+<td title='testcases.substore_testcase.verifyGetCommentsForPost()'><b>verifyGetCommentsForPost</b><br>Test class: testcases.substore_testcase<br>Test method: Precondition: Access to JSONPlaceholder API
+1. Send GET request to retrieve comments for a post by postId
+2. Verify the response status code is 200
+3. Validate that the response contains comments data</td>
+<td></td>
+<td>0</td>
+<td>testcases.substore_testcase@56f2bbea</td></tr>
+<tr>
+<td title='testcases.substore_testcase.verifyInventoryRequisitionRadioButtonSection()'><b>verifyInventoryRequisitionRadioButtonSection</b><br>Test class: testcases.substore_testcase<br>Test method: Pre condition: User should be logged in and it is on Inventory sub-module
+1. Naviaget to "Inventory Requisition" section
+2. Select "Pending" radio button
+3. Select "Complete" radio button
+4. Select "Canceled" radio button
+5. Select "Withdrawn" radio button
+6. Select "All" radio button
+7. Ensure that all radio buttons in the "List by Requisition Status" field are functional and clickable.</td>
+<td></td>
+<td>4</td>
+<td>testcases.substore_testcase@56f2bbea</td></tr>
+<tr>
+<td title='testcases.substore_testcase.verifyDeletePost()'><b>verifyDeletePost</b><br>Test class: testcases.substore_testcase<br>Test method: Precondition: Access to JSONPlaceholder API
+1. Send DELETE request to delete an existing post by ID
+2. Verify the response status code is 200 or 204
+3. Ensure the post is deleted by verifying a GET request returns 404</td>
+<td></td>
+<td>0</td>
+<td>testcases.substore_testcase@56f2bbea</td></tr>
+<tr>
+<td title='testcases.substore_testcase.verifySubstoreSubModule()'><b>verifySubstoreSubModule</b><br>Test class: testcases.substore_testcase<br>Test method: Pre condition: User should be logged in and it is on SubStore module
+1. Login in the healthapp application
+2. Click on the Substore
+3. "Select your Substore" pop up 
+4. Click on "Account" sub-modal
+5. Click on the "Inventory" sub-module
+6. Click on" Pharmacy" sub-module
+7. All sub-modules should be displayed correctly.
+8. Expected Sub modules are : Pharmacy, Inventory</td>
+<td></td>
+<td>6</td>
+<td>testcases.substore_testcase@56f2bbea</td></tr>
+</table><p>
+</body>
+</html>
